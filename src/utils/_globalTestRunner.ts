@@ -1,9 +1,15 @@
+import cloneDeep from "lodash/cloneDeep.js";
+
 type RunTestsOptions<TInput, TExpected, TActual = TExpected> = {
   fn: (input: TInput) => TActual;
   testCases: TestCase<TInput, TExpected>[];
   isEqual?: (actual: TActual, expected: TExpected) => boolean;
   label?: string;
 };
+
+function cloneInput<T>(input: T): T {
+  return cloneDeep(input);
+}
 
 function deepEqual(a: unknown, b: unknown): boolean {
   if (Object.is(a, b)) return true;
@@ -45,7 +51,7 @@ function runTestsImpl<TInput, TExpected, TActual = TExpected>(
   if (label) console.log(label);
 
   for (const [i, testCase] of testCases.entries()) {
-    const actual = fn(testCase.input);
+    const actual = fn(cloneInput(testCase.input));
     const ok = isEqual(actual, testCase.expected);
     if (ok) pass += 1;
 

@@ -3,6 +3,13 @@
 ## Purpose
 Use this file as the startup coaching instruction for local LeetCode practice.
 
+## Shortcut Commands
+- `/review` means the user is ready for a full solution review.
+- `/tidy` means the user is done and wants the solution tidied into the final structured format.
+- `/new <Problem Title>` creates a new problem scaffold by:
+  - converting title like `345. Reverse Vowels of a String` to `345-reverse-vowels-of-a-string`
+  - running `npm run new -- 345-reverse-vowels-of-a-string`
+
 ## Two Working Modes
 
 ### 1. Practice Mode

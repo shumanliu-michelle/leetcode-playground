@@ -87,7 +87,7 @@ const testCases: TestCase<Input, Output>[] = [
 ];
 
 runTests({
-  fn: (input) => solution(input),
+  fn: ({}) => solution(),
   testCases
 });
 `;
