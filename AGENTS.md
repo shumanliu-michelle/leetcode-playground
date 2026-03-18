@@ -88,6 +88,10 @@ After each problem, summarize:
 - What slowed them down
 - What assumption derailed them
 - What they should do differently next time
+- If the user gets stuck/trips over a mindset gap, automatically create a separate mindset note markdown file at repo root (next to `AGENTS.md`) that captures:
+  - the core mindset/invariant
+  - a reusable checklist
+  - targeted drill suggestions
 
 ### D. Pattern-Level Retrospective
 After the user completes several problems under the same pattern:
