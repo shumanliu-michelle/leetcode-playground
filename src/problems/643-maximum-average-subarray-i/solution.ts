@@ -1,18 +1,18 @@
 export function findMaxAverage(nums: number[], k: number): number {
-  let windowSum = 0;
-
-  for (let i = 0; i < k; i += 1) {
-    windowSum += nums[i];
+  let sum = 0;
+  let max = -Infinity;
+  let i = 0;
+  for (i = 0; i < k; i++) {
+    sum += nums[i]!;
   }
-
-  let maxSum = windowSum;
-
-  for (let i = k; i < nums.length; i += 1) {
-    windowSum += nums[i] - nums[i - k];
-    if (windowSum > maxSum) {
-      maxSum = windowSum;
-    }
+  max  = Math.max (max, sum/k);
+  while (i < nums.length) {
+    sum = sum + nums[i]! - nums[i-k]!;
+    max  = Math.max (max, sum/k);
+    i++;
   }
+  return max;
+};
 
-  return maxSum / k;
-}
+// time O(n)
+// space O(1)
