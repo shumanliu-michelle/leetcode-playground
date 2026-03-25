@@ -1,7 +1,7 @@
 # 1431. Kids With The Greatest Number Of Candies
 
 - Link: https://leetcode.com/problems/kids-with-the-greatest-number-of-candies
-- Difficulty: Easy
+- Difficulty: easy
 - Pattern: Array Scan, Threshold Check
 
 ## Question Summary
@@ -11,17 +11,15 @@ Given `candies[i]` and `extraCandies`, return a boolean array where each index s
 ## Solutions
 
 ### 1) Two-pass threshold approach (implemented)
-- Idea:
-  - First pass: compute `maxCandies`.
-  - Second pass: for each kid, check `candies[i] + extraCandies >= maxCandies`.
-- Time: `O(n)`
-- Space: `O(1)` auxiliary, `O(n)` including output
+- Idea: first pass compute `maxCandies`. Second pass for each kid check `candies[i] + extraCandies >= maxCandies`.
+- Time: O(n)
+- Space: O(1) auxiliary, O(n) including output
 
 ## Test Cases
 
-- Example: `[2,3,5,1,3]`, `extra=3` -> `[true,true,true,false,true]`
-- Example: `[4,2,1,1,2]`, `extra=1` -> `[true,false,false,false,false]`
-- Example: `[12,1,12]`, `extra=10` -> `[true,false,true]`
+- Example: `[2,3,5,1,3]`, `extra=3` → `[true,true,true,false,true]`
+- Example: `[4,2,1,1,2]`, `extra=1` → `[true,false,false,false,false]`
+- Example: `[12,1,12]`, `extra=10` → `[true,false,true]`
 - Edge: all equal values
 - Edge: `extraCandies = 0`
 - Edge: one clear maximum that still remains unique
@@ -36,5 +34,4 @@ Given `candies[i]` and `extraCandies`, return a boolean array where each index s
 
 ## Other Useful Notes
 
-- Your initial thought was correct and efficient: compute current max once, then check each kid against it.
 - The `>=` comparison is essential because multiple kids can share the greatest value.

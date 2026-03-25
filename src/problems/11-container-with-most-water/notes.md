@@ -1,8 +1,8 @@
 # 11. Container With Most Water
 
 - Link: https://leetcode.com/problems/container-with-most-water
-- Difficulty: Medium
-- Pattern: Two Pointers, Greedy Pruning
+- Difficulty: medium
+- Pattern: Two Pointers
 
 ## Question Summary
 
@@ -11,17 +11,14 @@ Given line heights, choose two lines that with the x-axis form a container holdi
 ## Solutions
 
 ### 1) Two pointers from both ends (implemented)
-- Idea:
-  - Start with widest container (`left = 0`, `right = n - 1`).
-  - Area is `min(h[left], h[right]) * (right - left)`.
-  - Move the shorter side inward each step.
-- Time: `O(n)`
-- Space: `O(1)`
+- Idea: start with widest container (`left = 0`, `right = n - 1`). Area is `min(h[left], h[right]) * (right - left)`. Move the shorter side inward each step.
+- Time: O(n)
+- Space: O(1)
 
 ## Test Cases
 
-- Example: `[1,8,6,2,5,4,8,3,7]` -> `49`
-- Minimal: `[1,1]` -> `1`
+- Example: `[1,8,6,2,5,4,8,3,7]` → `49`
+- Minimal: `[1,1]` → `1`
 - Equal heights
 - Strictly increasing / decreasing
 - Case where best answer is not at edges
@@ -34,5 +31,4 @@ Given line heights, choose two lines that with the x-axis form a container holdi
 ## Other Useful Notes
 
 - Core formula: `area = min(h[l], h[r]) * (r - l)`
-- Dominance reasoning:
-  - If `h[l] <= h[r]`, any pair with same `l` and smaller `r` cannot beat current area.
+- Dominance reasoning: if `h[l] <= h[r]`, any pair with same `l` and smaller `r` cannot beat current area.

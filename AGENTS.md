@@ -3,10 +3,10 @@
 ## Purpose
 Use this file as the startup coaching instruction for local LeetCode practice.
 
-## Shortcut Commands
-- `//review` means the user is ready for a full solution review.
-- `//tidy` means the user is done and wants the solution tidied into the final structured format.
-- `//new <Problem Title>` creates a new problem scaffold by:
+## Slash Commands
+- `/check` — run a full solution review (checks complexity, edge cases, TypeScript, inline 💬 feedback)
+- `/tidy` — convert the working solution into the final structured study note format (solution.ts + tests.ts + notes.md)
+- `/create <Problem Title>` — scaffolds a new problem:
   - converting title like `345. Reverse Vowels of a String` to `345-reverse-vowels-of-a-string`
   - running `npm run new -- 345-reverse-vowels-of-a-string`
 

@@ -1,8 +1,8 @@
 # 392. Is Subsequence
 
 - Link: https://leetcode.com/problems/is-subsequence
-- Difficulty: Easy
-- Pattern: Two Pointers, Binary Search (Follow-up)
+- Difficulty: easy
+- Pattern: Two Pointers
 
 ## Question Summary
 
@@ -11,21 +11,14 @@ Given strings `s` and `t`, determine whether `s` is a subsequence of `t` (charac
 ## Solutions
 
 ### 1) Two pointers (implemented)
-- Idea:
-  - Use one pointer on `s` and one on `t`.
-  - Scan `t`; whenever chars match, advance pointer on `s`.
-  - If pointer on `s` reaches end, subsequence exists.
-- Time: `O(|t|)`
-- Space: `O(1)`
+- Idea: use one pointer on `s` and one on `t`. Scan `t`; whenever chars match, advance pointer on `s`. If pointer on `s` reaches end, subsequence exists.
+- Time: O(|t|)
+- Space: O(1)
 
-### 2) Follow-up for many incoming `s` queries (implemented)
-- Idea:
-  - Preprocess `t` into `char -> sorted indices` map.
-  - For each char in query `s`, binary search the first index greater than previous matched index.
-- Time:
-  - Preprocess: `O(|t|)`
-  - Per query: `O(|s| log |t|)` (more precisely by char-frequency bucket)
-- Space: `O(|t|)` for index map
+### 2) Follow-up for many incoming `s` queries (alternative)
+- Idea: preprocess `t` into `char -> sorted indices` map. For each char in query `s`, binary search the first index greater than previous matched index.
+- Time: preprocess O(|t|), per query O(|s| log |t|)
+- Space: O(|t|) for index map
 
 ## Test Cases
 

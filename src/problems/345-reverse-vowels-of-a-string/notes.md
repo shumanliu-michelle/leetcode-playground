@@ -1,8 +1,8 @@
 # 345. Reverse Vowels Of A String
 
 - Link: https://leetcode.com/problems/reverse-vowels-of-a-string
-- Difficulty: Easy
-- Pattern: Two Pointers, String
+- Difficulty: easy
+- Pattern: Two Pointers
 
 ## Question Summary
 
@@ -11,24 +11,19 @@ Given a string, reverse only its vowels in-place order (support both lowercase a
 ## Solutions
 
 ### 1) Two pointers from both ends (implemented)
-- Idea:
-  - Use `left` and `right` pointers.
-  - Move each pointer until it reaches a vowel.
-  - Swap those two vowels, then move inward.
-- Time: `O(n)`
-- Space: `O(n)` (string converted to char array)
+- Idea: use `left` and `right` pointers. Move each pointer until it reaches a vowel. Swap those two vowels, then move inward.
+- Time: O(n)
+- Space: O(n) (string converted to char array)
 
 ### 2) Collect-and-replace variant (alternative)
-- Idea:
-  - Collect all vowels in one pass.
-  - Refill vowel positions from the collected list in reverse order.
-- Time: `O(n)`
-- Space: `O(n)`
+- Idea: collect all vowels in one pass. Refill vowel positions from the collected list in reverse order.
+- Time: O(n)
+- Space: O(n)
 
 ## Test Cases
 
-- Example: `"IceCreAm"` -> `"AceCreIm"`
-- Example: `"leetcode"` -> `"leotcede"`
+- Example: `"IceCreAm"` → `"AceCreIm"`
+- Example: `"leetcode"` → `"leotcede"`
 - Edge: odd number of vowels
 - Edge: even number of vowels
 - Edge: no vowels (`"xyz"`)

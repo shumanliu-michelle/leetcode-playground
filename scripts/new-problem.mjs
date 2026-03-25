@@ -93,10 +93,14 @@ runTests({
 `;
 }
 
-function notesTemplate(folderName) {
-  return `# ${folderName}
+function notesTemplate(slug) {
+  const [number, ...titleParts] = slug.split("-");
+  const title = titleParts
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+  return `# ${number}. ${title}
 
-- Link:
+- Link: 
 - Difficulty:
 - Pattern:
 
@@ -104,10 +108,10 @@ function notesTemplate(folderName) {
 
 ## Solutions
 
-### 1) Approach
+### 1) Approach Name
 - Idea:
-- Time:
-- Space:
+- Time: O()
+- Space: O()
 
 ## Test Cases
 

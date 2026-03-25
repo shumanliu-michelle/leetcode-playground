@@ -1,8 +1,8 @@
 # 283. Move Zeroes
 
 - Link: https://leetcode.com/problems/move-zeroes
-- Difficulty: Easy
-- Pattern: Two Pointers, In-Place Stable Partition
+- Difficulty: easy
+- Pattern: Two Pointers
 
 ## Question Summary
 
@@ -11,16 +11,13 @@ Move all zeroes in an array to the end while keeping the relative order of non-z
 ## Solutions
 
 ### 1) Two pointers (implemented)
-- Idea:
-  - `right` scans each element.
-  - `left` tracks next index to place a non-zero.
-  - When `nums[right] !== 0`, swap with `nums[left]` and advance `left`.
-- Time: `O(n)`
-- Space: `O(1)`
+- Idea: `right` scans each element. `left` tracks next index to place a non-zero. When `nums[right] !== 0`, swap with `nums[left]` and advance `left`.
+- Time: O(n)
+- Space: O(1)
 
 ## Test Cases
 
-- Example: `[0,1,0,3,12]` -> `[1,3,12,0,0]`
+- Example: `[0,1,0,3,12]` → `[1,3,12,0,0]`
 - Single element zero
 - No zeros
 - All zeros
