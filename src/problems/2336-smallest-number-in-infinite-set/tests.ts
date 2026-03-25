@@ -12,11 +12,11 @@ function runTestSequence(
   expected: (number | null)[]
 ): void {
   const results: (number | null)[] = [];
-  for (const { op, num } of operations) {
-    if (op === "pop") {
+  for (const operation of operations) {
+    if (operation.op === "pop") {
       results.push(obj.popSmallest());
     } else {
-      obj.addBack(num);
+      obj.addBack(operation.num);
       results.push(null);
     }
   }

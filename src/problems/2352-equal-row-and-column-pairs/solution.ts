@@ -1,4 +1,4 @@
-function equalPairs(grid: number[][]): number {
+export function equalPairs(grid: number[][]): number {
     const rows = new Map();
     let ans = 0;
     for (const row of grid) {

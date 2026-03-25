@@ -9,7 +9,7 @@ export function findKthLargest(nums: number[], k: number): number {
         minHeap.dequeue();
       }
     }
-    return minHeap.front();
+    return minHeap.front()!;
 };
 
 export function findKthLargest_countingSort(nums: number[], k: number): number {
